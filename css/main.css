@@ -92,209 +92,173 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Author's custom styles (MOBILE-LUNA)
    ========================================================================== */
-/* background color: #ffcce5;
+
+   /* background color: #ffcce5;
   LIGHT DIV #f2f2f2
   pink font  color: #ff80aa;*/
 
    html, body {
-     font-family: 'Source Serif Pro', serif;
-     background-color: #ffcce5;
-     color: #404040;
-     width: 96%;
-     padding-left: 2%;
-     padding-right: 2%;
-     margin:auto;
-   }
+       font-family: 'Source Serif Pro', serif;
+       background-color: #ffcce5;
+       color: #404040;
+       width: 96%;
+       padding-left: 2%;
+       padding-right: 2%;
+       margin:auto;
+       overflow-x: hidden;
+     }
+/*=====PAGE SETUP===============*/
 
-   .full-width {
-     width: 100%;
-     max-width:1200px;
-     margin: 0 auto;
-   }
-
-   .half-width {
-       width: 50%;
-       float: left;
-   }
-
-   .third-width {
-       width: 33.3%;
-       float: left;
+     .div-2 {
+       display: block;
+       clear: both;
+       background-position:center;
+       background-size: cover;
+       background-repeat:no-repeat;
+       background-color: #f2f2f2;
+       width:100%;
+       margin-right:1%;
+       margin-bottom: 1%;
        margin-top: 1%;
+       padding-bottom: 5%;
+       border:1px solid #ccc;
+       border-radius: 10px;
+       box-shadow: 10px 10px 5px #888888;
+       text-align: center;
      }
 
-.home-full-width {
-  clear: both;
-  background-position:center;
-  background-size: cover;
-  background-repeat:no-repeat;
-  width:100%;
-  margin: 2% 0;
-  border:1px solid #ff99cc;
-  background-color: #ff99cc;
-  border-radius: 10px;
-}
+     .div-3 {
+       display: block;
+       clear: both;
+       background-position:center;
+       background-size: cover;
+       background-repeat:no-repeat;
+       background-color: #f2f2f2;
+       width:100%;
+       margin-right:1%;
+       margin-bottom: 1%;
+       margin-top: 4%;
+       padding-bottom: 5%;
+       border:1px solid #ccc;
+       border-radius: 10px;
+       box-shadow: 10px 10px 5px #888888;
+     }
 
-   #company-name {
-     font-family:'Cinzel Decorative', cursive;
-     font-size: 3.5em;
-     font-weight: 900;
-     color: #ff80aa;
-     text-transform: capitalize;
-     letter-spacing: 5px;
-     text-align: center;
-     width: auto;
-   }
-
-   .introduction h2 {
-     font-style: italic;
-     line-height: 20px;
-     font-weight: 300;
-     text-align: center;
-     line-height: 1em;
-   }
-
-  #nav {
-     clear: both;
-     text-align: center;
-   }
-
-   nav {padding: 75px 40px;
+/*===NAVIGATION mobile=========*/
+     #nav {
+         clear: both;
+         text-align: right;
        }
 
-   nav ul li {display: inline-block;}
+       #nav.js {
+         display: none;
+       }
 
-   nav ul li a {
-               text-transform: uppercase;
-               text-decoration: none;
-               font-size: 1.2em;
-               color: #222;
-               padding-left: 4%;
-               background:#ffcce5;
-               float: right;}
+       nav {padding: 20px 5px;
+           }
 
-   #menu {
-     border: solid 1px #ff99cc;
-     border-radius: 10px;
-     float: right;
-     margin-top: 10px;
-   }
+       nav ul li {display: block;}
 
-   .div-2 {
-    clear: both;
-    background-position:center;
-    background-size: cover;
-    background-repeat:no-repeat;
-    width:100%;
-    float:left;
-    margin-right:1%;
-    margin-bottom: 1%;
-    margin-top: 1%;
-    border:1px solid #c;
-    border-radius: 10px;}
+       nav ul li a {
+                   text-transform: uppercase;
+                   text-decoration: none;
+                   font-size: 1.2em;
+                   color: #222;
+                   padding-left: 4%;
+                   background:#ffcce5;
+                   text-align: right;}
 
-   #header-bkgd {
-   background-color: #f2f2f2;
-   }
+       #menu {
+         border: solid 1px #ff99cc;
+         border-radius: 5px;
+         float: right;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         background-color: #222;
+         padding: 5px 10px;
+         font-weight: bolder;
+         color: #fff;
+       }
 
-/*.gallery {
-  clear: both;
-  background-position:center;
-	background-size:contain;
-	background-repeat:no-repeat;
-	width:90%;
-	padding-bottom:40px;
-	margin-right:20px;
-  border: 1px solid #eee;
+/*=======company mobile==========*/
 
-  } */
+.name h1 {
+  font-family:'Cinzel Decorative', cursive;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: #ff80aa;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  text-align: center;
+  width: auto;
+  margin: -1.5em;
 
-.third-width {
-  background-position:center;
-	background-size:cover;
-	background-repeat:no-repeat;
-	width:40%;
-	padding-bottom:40%;
-  margin-left: 25px;
-	margin-right:10px;
-	border:1px solid #ccc;
 }
 
-#editorial {
-  background-image: url('../img/editorial/img-15.jpg');
+.name h2 {
+  line-height: 75px;
+  font-size: 1em;
+  font-weight: 500;
+  font-style: italic;
 }
 
-#bridal {
-  background-image: url('../img/bridal/img-bride-03.jpg');
+.name {
+  margin: -2em;
 }
 
-#teens {
-  background-image: url('../img/editorial/img-05.jpg');
+/*=====HOME PAGE mobile=========*/
+.home-img {
+  width: 95%;
+  margin-top: 2%;
+  border: 10px solid #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
 }
 
-/*------SERVICES-------*/
-
-.full-width {
-clear: both;
-background-position:center;
-background-size: cover;
-background-repeat:no-repeat;
-width:100%;
-margin: 2% 0;
-border:1px solid #ff99cc;
-border-radius: 10px;
+.text {
+  margin-top: 3%;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1em;
 }
 
-#services {
-  background-color: #f2f2f2;
+.social-media {
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+
+/*=====SERVICES mobile==========*/
+.services {
+  margin-left: 5%;
   text-align: center;
 }
 
-.service-categories {
-  word-spacing: 300px;
-
+.service-instructions {
+  text-align: center;
 }
 
-.standard-services {
-  clear: both;
-}
-
-.standard-services h2 {
+.services h2 {
   color: #ff80aa;
 }
 
-.standard-services p {
-  padding-left: 8%;
-  padding-right: 8%;
-}
-
-.standard-services span {
+.services span {
   font-size: 1.5em;
+
 }
 
 .service-img {
   background-position:center;
 	background-size:cover;
 	background-repeat:no-repeat;
-	width: 25%;
-	padding-bottom:25%;
+	width: 22%;
+	padding-bottom:22%;
   float: left;
-  margin: 4%;
-  margin-top: 0;
+  margin-left: 8%;
+  margin-bottom: 5%;
   border:1px solid #ff99cc;
   border-radius: 10px;
-}
-
-
-h4 {
-  text-transform: uppercase;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 1.3em;
-  color: #4d4d33;
-
 }
 
 #serv-img {
@@ -305,68 +269,20 @@ h4 {
   background-image: url('../img/editorial/img-01.jpeg');
 }
 
-.photoshoot {
-  float: left;
-  padding-left: 7%;
-  padding-right: 8%;
-}
-
-.photoshoot h2 {
-  color: #ff80aa;
-}
-
-.photoshoot span {
-  font-size: 1.5em;
-
-}
-
-.bridal-packages {
-  float: left;
-  padding-left: 7%;
-  padding-right: 8%;
-}
-
-.bridal-packages h2 {
-  color: #ff80aa;
-}
-
-.bridal-packages span {
-  font-size: 1.5em;
-
-}
-
 #bride-img {
   background-image: url('../img/bridal/img-bride-07.jpg');
 }
 
-/*---ABOUT--------*/
-
-.team {
-clear: both;
-background-position:center;
-background-size: cover;
-background-repeat:no-repeat;
-background-color: #f2f2f2;
-width:100%;
-float:left;
-margin: 2% 0;
-border:1px solid #ff99cc;
-border-radius: 10px;
-}
-
-.team-img {
-	width:40%;
-	padding-bottom:40%;
-}
-
+/*=======ABOUT mobile==========================*/
 .team-img {
 	background-position:center;
 	background-size:cover;
 	background-repeat:no-repeat;
-	width:25%;
-	padding-bottom:25%;
+	width:30%;
+	padding-bottom:30%;
 	float:left;
-	margin:2%;
+	margin:5%;
+  margin-top: 6%;
 	border:1px solid #ccc;
 }
 
@@ -374,138 +290,35 @@ border-radius: 10px;
   background-image: url();
 }
 
-.team-description {
-  margin: 2%;
-}
-
 .team-title {
   color: #ff80aa;
+  font-size: 1.75em;
+  font-weight: 300;
+
 }
 
-/*-----GALLERY--------*/
+.team-description {
+  margin: 5%;
+
+}
+
+/*=====GALLERY mobile============*/
 .galleries {
   text-align: center;
   margin: 0 auto;
 }
 
 .galleries h2 {
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 
-
-/*HOME PAGE SLIDE SHOW-------*/
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  width: 100%;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #222;
-  font-size: 2em;
-  font-style: italic;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 1em;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  display: none;
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  display: none;
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* GALLERY CAROUSEL------------------------*/
-
-/* CONTACT US------------------------------*/
-.map-container iframe {
-  clear: both;
-  margin-top: 10px;
-}
-
+/*=======CONTACT mobile=========*/
 .storefront {
 background-position:center;
 background-size: cover;
 background-repeat:no-repeat;
-width:35%;
-padding-bottom: 25%;
+width:45%;
+padding-bottom: 45%;
 float:left;
 margin-right:1%;
 margin-bottom: 1%;
@@ -517,25 +330,95 @@ border:1px solid #ccc;
   background-image: url('../img/mh-location.png');
 }
 
-/* BOOK NOW ---------------------------------------*/
-.calendar-container {
-  text-align: center;
-  border: solid 7px #ff80aa;
-  border-radius: 5px;
-  margin: 20px 160px;
+.on-site {
+  font-style: italic;
+  line-height: 28px;
 }
 
-.booking-instructions {
+.on-site h2 {
+  font-style: normal;
+  line-height: 10px;
+  padding-top: 10px;
+}
+
+.on-site span {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.on-site p {
+  line-height: 25px;
+}
+
+.location {
+  margin: 5%;
+}
+
+.container {
+  padding-top: 5%;
+}
+
+.contact-form {
+  margin: 8% auto;
+}
+
+.backup {
+  margin: 5%;
+}
+
+.map-container {
+  display: none;
+}
+
+.thanks {
+  margin: 5%;
   text-align: center;
+}
+
+/*=====BOOK NOW mobile===========*/
+.booking-instructions {
+  margin: 5%;
 }
 
 .booking-instructions h1 {
+  text-align: center;
+  font-size: 1.5em;
   color: #ff80aa;
   text-transform: uppercase;
 }
 
-.instruction-list {
-  font-size: 1.5em;
+.calendar-link {
+  text-align: center;
+}
+
+.calendar-container {
+  display: none;
+}
+
+.paypal {
+  text-align: center;
+  margin-top: 2%;
+}
+
+/*=====GALLERY mobile===========*/
+.gallery-wrapper {
+  text-align: center;
+}
+
+.gallery-wrapper h2 {
+  color: #ff80aa;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.gallery-wrapper h3 {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/*=======FOOTER mobile===========*/
+footer {
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -617,176 +500,6 @@ border:1px solid #ccc;
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (max-width: 320px){
-       #company-name {
-         font-family:'Cinzel Decorative', cursive;
-         font-size: 3em;
-         font-weight: 900;
-         color: #ff80aa;
-         text-transform: capitalize;
-         letter-spacing: 5px;
-         text-align: center;
-         line-height: 1em;
-         width: auto;
-                     }
-
-
-}
-
- @media only screen and (min-width: 768px){
-     #company-name {
-       font-family:'Cinzel Decorative', cursive;
-       font-size: 3.5em;
-       font-weight: 900;
-       color: #ff80aa;
-       text-transform: capitalize;
-       letter-spacing: 5px;
-       text-align: center;
-       line-height: 1em;
-       width: auto;
-                   }
-
-      .full-width {
-       clear: both;
-       background-position:center;
-       background-size: cover;
-       background-repeat:no-repeat;
-       width:100%;
-       float:left;
-       margin: 2% 0;
-       border:1px solid #ff99cc;
-       border-radius: 10px;
-                   }
-
-
-   }
-
-   @media screen and (max-width: 768px) {
-   		#menu {
-   			width:2em;
-        height: 2em;
-   			display: block;
-   			background:#e6e6e6;
-   			font-size:1.35em;
-   			text-align: center;
-        line-height: 2em;
-   		}
-   		#nav.js {
-   			display: none;
-   		}
-   		ul {
-   			width:100%;
-   		}
-   		li {
-   			width:100%;
-   			border-right:none;
-   		}
-
-      .full-width {
-      clear: both;
-      background-position:center;
-      background-size: cover;
-      background-repeat:no-repeat;
-      width:100%;
-      float:left;
-      margin: 2% 0;
-      border:1px solid #ff99cc;
-      border-radius: 10px;
-      }
-
-      .third-width {
-            width: 33.3%;
-            clear: both;
-           }
-
-
-      .editorial-gallery h2{
-        margin: 2%;
-      }
-
-   	}
-
-   @media only screen and (min-width: 940px) {
-     #menu {
-       display: none;}
-
-     nav {word-spacing: 40px;
-       padding: 0;
-         }
-
-     nav ul li {display: inline;
-                float: none;
-                text-align: center;
-
-                }
-
-     nav ul li a {
-                 text-transform: uppercase;
-                 text-decoration: none;
-                 font-size: 1.2em;
-                 color: #222;;
-                 background:#ffcce5;
-                 float: none;
-                 word-spacing: 3px;
-                 }
-
-   .div-2 {margin: 0;}
-
-   #company-name {
-     font-family:'Cinzel Decorative', cursive;
-     font-size: 3.5em;
-     font-weight: 900;
-     color: #ff80aa;
-     text-transform: capitalize;
-     letter-spacing: 5px;
-     text-align: center;
-     line-height: 0.625em;
-                 }
-
-  .introduction h2 {
-    font-style: italic;
-    line-height: 20px;
-    font-weight: 300;
-    text-align: center;
-    line-height: 0.3em;
-                 }
-
-    .full-width {
-     clear: both;
-     background-position:center;
-     background-size: cover;
-     background-repeat:no-repeat;
-     width:100%;
-     float:left;
-     margin: 2% 0;
-     border:1px solid #ff99cc;
-     border-radius: 10px;
-                 }
-  .third-width {
-        width: 33.3%;
-        float: left;
-       }
-
-  .third-width {
-        background-position:center;
-        background-size:cover;
-        background-repeat:no-repeat;
-        width:30%;
-        float: left;
-        padding-bottom:40%;
-        margin-left: 25px;
-        margin-right:10px;
-        border:1px solid #ccc;}
- }
-
- .slideshow-container {
-   max-width: 1000px;
-   width: 40%;
-   position: relative;
-   margin: auto;
-   margin-top: 40px;
- }
-
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
@@ -798,6 +511,164 @@ border:1px solid #ccc;
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
+
+/*=========SCREEN MEDIA QUERIES========================*/
+@media only screen and (min-width: 320px){
+.on-site h2 {
+  line-height: 30px;
+}
+
+.storefront {
+  padding-bottom: 65%;
+}
+
+}
+
+@media only screen and (min-width: 768px){
+.container {
+  clear: both;
+  padding-top: 5%;
+}
+
+.storefront {
+  padding-bottom: 45%;
+}
+
+}
+
+
+@media only screen and (min-width: 940px) {
+  #menu {
+         display: none;}
+
+  #nav.js {
+    display: inline;
+    text-align: center;
+  }
+
+       nav {word-spacing: 40px;
+         padding: 0;
+           }
+
+       nav ul li {display: inline;
+                  float: none;
+                  text-align: center;
+                  }
+
+       nav ul li a {
+                   text-transform: uppercase;
+                   text-decoration: none;
+                   font-size: 1.2em;
+                   color: #222;;
+                   background:#ffcce5;
+                   float: none;
+                   word-spacing: 3px;
+
+                   }
+.name h1 {
+  font-size: 2em;
+  padding-top: 10px;
+
+}
+
+.name h2 {
+  font-size: 1.5em;
+  padding-top: 10px;
+}
+
+.name img {
+  padding-top: 30px;
+}
+
+.home-img {
+  width: 40%;
+  margin-left: 350px;
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 0;
+  word-spacing: 30px;
+}
+
+.team-title {
+  line-height: 5px;
+}
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+  /*
+  #menu {
+         display: none;}
+
+  #nav.js {
+    display: inline;
+    text-align: center;
+  }
+
+    nav {padding: 20px 5px;
+        }
+
+    nav ul li {display: block;}
+
+    nav ul li a {
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 1.2em;
+                color: #222;
+                padding-left: 4%;
+                background:#ffcce5;
+                text-align: right;}
+
+    #menu {
+      border: solid 1px #ff99cc;
+      border-radius: 5px;
+      float: right;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: #222;
+      padding: 5px 10px;
+      font-weight: bolder;
+      color: #fff;
+    } */
+
+nav {
+  word-spacing: 10px;
+}
+
+/*=====GRID 1024px==============*/
+.div-3 {
+  padding-bottom: 100%;
+}
+
+/*=====HOME 1024px==============*/
+.home-img {
+  width: 96%;
+  margin-left: 1%;
+}
+
+/*====ABOUT 1024px==============*/
+
+.team-title {
+  margin: 5%;
+}
+
+/*=====CONTACT 1024px===========*/
+.storefront {
+  width: 30%;
+  padding-bottom: 30%;
+}
+
+.on-site {
+  padding-top: 15px;
+}
+
+
+}
+
+
 
 /* ==========================================================================
    Print styles.

@@ -8,7 +8,7 @@ $(document).ready(function(){
   			$("#nav").removeAttr("style");
   		}
 
-    });
+});
 
 
     var slideIndex = 1;

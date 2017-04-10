@@ -13,6 +13,8 @@
 
         <link rel="stylesheet" type="text/css" href="../css/normalize.css">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arapey|Source+Serif+Pro" rel="stylesheet">
@@ -33,41 +35,86 @@
               <li><a href="../services/index.html">Services</a></li>
               <li><a href="../about/index.html">About</a></li>
               <li><a href="../gallery/index.html">Gallery</a></li>
-              <li><a href="contact/index.html">Contact</a></li>
+              <li><a href="#">Contact</a></li>
               <li><a href="../book-now/index.html">Book Now</a></li>
           </ul>
         </nav>
 </div>
 
-<div class="div-2" id="header-bkgd">
-  <header class="introduction">
-      <h1 id="company-name">Tanika Green Artistry</h1>
+<div class="social-media">
+  <a href="https://www.facebook.com/tanika.green.71" target="_blank"><img src="../img/facebook-3-64-888.png" alt="facebook-logo" style="width:28px; height:28px;"></a>
+  <a href="https://instagram.com/_u/tanikagreenmua?r=sun1" target="_blank" ><img src="../img/instagram-64-888.png" alt="instagram-logo" style="width:28px; height:28px;"></a>
+  <a href="https://twitter.com/tanika_green" target="_blank"><img src="../img/twitter-64-888.png" alt="twitter-logo" style="width:28px; height:28px;"></a>
+  <a href="https://www.youtube.com/channel/UCquGv-hENzNwNwg0e0t6opQ" target="_blank"><img src="../img/youtube-4-64-888.png" alt"youtube-logo" style="width:28px; height:28px;"></a>
+  <a href="https://www.linkedin.com/in/tanika-l-green-b8502488/" target="_blank"><img src="../img/linkedin-3-64-888.png" alt="linkedin-logo" style="width:28px; height:28px;"></a>
+</div>
+
+<div class="div-2">
+  <div class="name">
+    <img src="../img/tg-logo.png" id="logo" alt="tanika-green-artistry-logo" style="width:180px; height:200px; margin:0">
+      <h1>Tanika Green <br>Artistry</h1>
       <h2>Manifesting Beauty At Its Best...</h2>
-  </header>
+    </div>
 </div>
 
 <!---END OF HEADER AREA--------------------------->
 
 
-<div class="team"><!--white container-->
+<div class="div-3"><!--white container-->
 
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9341784693565!2d-74.17320808539237!3d40.74147384375022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2537ff820c6eb%3A0x21161a691a7f93f4!2s29+Halsey+St%2C+Newark%2C+NJ+07102!5e0!3m2!1sen!2sus!4v1488816730604" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  <div class="location">
+    <div class="storefront" id="store-loc"></div>
+
+    <section class="on-site">
+      <h2>On-Site Location</h2>
+      <p><span>29 Halsey St.<br>Newark, NJ 07102<br>973-643-0302</span><br>(Between My Chic Nails and 27 Mix)</p>
+    </section>
+  </div><!--location-->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form action="html-contact-form.php" id="form" method="post" name="form">
+          <h2 class="contact-tanika">Contact Tanika</h2>
+          <p><b>Name:</b><input name="name" type="text" value="">
+          <p><b>Email:</b><input name="email" type="text" value="">
+          <p><b>Subject:</b><input name="subject" type="text" value="">
+          <p><b>Message:</b><textarea name="message"></textarea>
+
+          <img src="captcha_code_file.php"
+          id="captchaimg" >
+          <br>
+          <label for="message">Enter the code below:</label>
+          <input id="6_letters_code" name="6_letters_code" type="text">
+
+          <input id="send" name="submit" type="submit" value="Send">
+        </form>
+      </div>
+      <div class="col-md-6"></div>
   </div>
+</div>
 
-  <div class="storefront" id="store-loc">
-  </div>
 
-  <section class="on-site">
-    <h2>On-Site Location</h2>
-    <p>29 Halsey St.<br>Newark, NJ 07102<br>Between My Chic Nails and 27 Mix</p>
-  </section>
 
-          <div class="team-member clearfix">
-             
-            </div>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9341784693565!2d-74.17320808539237!3d40.74147384375022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2537ff820c6eb%3A0x21161a691a7f93f4!2s29+Halsey+St%2C+Newark%2C+NJ+07102!5e0!3m2!1sen!2sus!4v1488816730604" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+<div class="backup">
+  <p>If it has been 48 hours since you submitted the form and you have not received a reply, <a href="mailto:mirroredimage.mua@gmail.com">click here</a>.
+</div>
+
+</div><!--div-3-->
+
+          <footer>
+            <p>Website created by <a href="http://barnettmarketing.org/" target="_blank">Barnett Marketing Solutions</a></p>
+          </footer>
+
 
 <!---END OF AUTHOR INPUT---->
+
         <script type="text/javascript" src="../js/script.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
