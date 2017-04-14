@@ -229,6 +229,12 @@ textarea {
   margin-bottom: 0;
 }
 
+#logo-lid {
+  width: 80px;
+  height: 80px;
+  padding: 11%;
+}
+
 /*=====SERVICES mobile==========*/
 .services {
   margin-left: 5%;
@@ -287,7 +293,7 @@ textarea {
 }
 
 #team-img-tanika {
-  background-image: url();
+  background-image: url(../img/tanika.jpg);
 }
 
 .team-title {
@@ -308,8 +314,14 @@ textarea {
   margin: 0 auto;
 }
 
-.galleries h2 {
+.gallery-wrapper h2 {
   font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+.gallery-wrapper p {
+  margin: 1% 5%;
+  font-size: 12px;
 }
 
 /*=======CONTACT mobile=========*/
@@ -327,7 +339,7 @@ border:1px solid #ccc;
 }
 
 #store-loc {
-  background-image: url('../img/mh-location.png');
+  background-image: url('../img/mh-location.jpg');
 }
 
 .on-site {
@@ -363,6 +375,7 @@ border:1px solid #ccc;
 }
 
 .backup {
+  clear: both;
   margin: 5%;
 }
 
@@ -534,6 +547,12 @@ footer {
   padding-bottom: 45%;
 }
 
+#logo-lid {
+  width: 100px;
+  height: 100px;
+  padding: 1%;
+  margin: 5%;
+
 }
 
 
@@ -593,6 +612,13 @@ footer {
 
 .team-title {
   line-height: 5px;
+}
+
+#logo-lid {
+  width: 130px;
+  height: 130px;
+  padding: 0;
+  margin: 5%;
 }
 
 }

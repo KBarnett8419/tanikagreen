@@ -1,5 +1,5 @@
 <?php
-$your_email ='mirroredimage.mua@gmail.com';// <<=== update to your email address
+$your_email ='booking@tanikagreen.com';// <<=== update to your email address
 
 session_start();
 $errors = '';
