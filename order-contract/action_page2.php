@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['sign-Submit'])){
 $allergies='None';
-$subject='CONTRACT SIGNED';
+$subject='TGA: CONTRACT SIGNED';
 $ToEmail='booking@tanikagreen.com';
 $emailm='booking@tanikagreen.com';
 $mailheader = "From: ".$emailm."\r\n";
@@ -12,7 +12,8 @@ $date = $_REQUEST["date"];
 $from = $_REQUEST["from"];
 $verif_box = $_REQUEST["verif_box"];
 $phone=$_POST['phone'];
-$allergies=$_POST['allergies'];
+$address=$_POST['address'];
+$allergies=$_POST["allergies"];
 // remove the backslashes that normally appears when entering " or '
 $name = stripslashes($name);
 $name2 = stripslashes($name2);
@@ -25,13 +26,15 @@ if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 	$message = "
 	<br /><br />
 	Your contract has been signed by ".$name."<br/>
+	<br/>
 	Customer Information:<br/>
 	Name: ".$name." <br/>
 	Email: ".$from."<br/>
 	Phone: ".$phone."<br/>
-  Allergies: ".$allergies."<br/>
-	<br />
+	Address: ".$address."<br/>
+  <br/>
 	Service(s) Requested: ".$services."<br/>
+	Allergies: ".$allergies."<br/>
 	<br/>
 	Name Used for E-Signature: ".$name2."<br/>
 	Date Signed: ".$date."<br/>
@@ -68,6 +71,7 @@ if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 	booking@tanikagreen.com<br>
 	www.tanikagreen.com</p>";
 	mail($ToEmail, $subject, $message, $mailheader);
+	$email_to = ".$from.";
 	// delete the cookie so it cannot sent again by refreshing this page
 	setcookie('tntcon','');
 	header('Location: thanks.html'); //Replace with your domain or with thank you page
