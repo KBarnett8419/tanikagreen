@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['sign-Submit'])){
 $allergies='None';
-$subject='CONTRACT SIGNED';
+$subject='Service Request';
 $ToEmail='booking@tanikagreen.com';
 $emailm='booking@tanikagreen.com';
 $mailheader = "From: ".$emailm."\r\n";
@@ -23,19 +23,17 @@ $services=$_COOKIE['service'];
 if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 	// if verification code was correct send the message and show this page
 	$message = "
+	Hello,
 	<br /><br />
-	Your contract has been signed by ".$name."<br/>
-	Customer Information:<br/>
-	Name: ".$name." <br/>
+	You have a service Request from ".$name."<br/>
 	Email: ".$from."<br/>
 	Phone: ".$phone."<br/>
-  Allergies: ".$allergies."<br/>
-	<br />
-	Service(s) Requested: ".$services."<br/>
-	<br/>
-	Name Used for E-Signature: ".$name2."<br/>
-	Date Signed: ".$date."<br/>
-<h4>Electronic Signature by ".$name2." acknowledges and agrees with the following Detailed Contract Policy of Tanika Green Artistry:</h4>
+	Services: ".$services."<br/>
+	Date: ".$date."<br/>
+	Allergies: ".$allergies."<br/>
+	<br /><br />
+	Name used for Contract: ".$name2."<br/>
+<h4>Detailed Contract Policy</h4>
 <p>
 <b>BOOKINGS:</b> To secure a date, a signed contract is required with a 30% deposit due at the time of signing. The deposit is non-refundable and non-transferable. Please be advised date and scheduled makeup times will only be reserved when a signed contract and deposit are received.
 <br><br>
@@ -60,17 +58,11 @@ if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 <b>PAYMENT:</b>  The final balance is due on the day of the event – <span>no exceptions</span>. The person(s) responsible for the entire balance of payment is the person(s) that has a signed booking contract. Acceptable forms of payment are: cash, credit or payment through PayPal. For all credit card payments, a 3% service will be added to each transaction.
  </p>
 	<br/><br/>
-	Please retain a copy for your records. <br/>
-	<br/>
-	<p><b>TANIKA GREEN</b><br>
-	Professional Makeup Artist<br>
-	973-207-3834<br>
-	booking@tanikagreen.com<br>
-	www.tanikagreen.com</p>";
+	Thank you!";
 	mail($ToEmail, $subject, $message, $mailheader);
 	// delete the cookie so it cannot sent again by refreshing this page
 	setcookie('tntcon','');
-	header('Location: thanks.html'); //Replace with your domain or with thank you page
+	header('Location: http://tanikagreen.com/order-contract/thanks'); //Replace with your domain or with thank you page 
 } else {
 	// if verification code was incorrect then return to contact page and show error
 	header("Location:".$_SERVER['HTTP_REFERER']."?subject=$subject&from=$from&message=$message&wrong_code=true");

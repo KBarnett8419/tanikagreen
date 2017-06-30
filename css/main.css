@@ -171,7 +171,7 @@ textarea {
                    text-align: right;}
 
        #menu {
-         border: solid 1px #ff99cc;
+         border: solid 1px #222;
          border-radius: 5px;
          float: right;
          margin-top: 10px;
@@ -209,6 +209,10 @@ textarea {
 }
 
 /*=====HOME PAGE mobile=========*/
+.home-full-width {
+  display: block;
+}
+
 .home-img {
   width: 95%;
   margin-top: 2%;
@@ -233,6 +237,10 @@ textarea {
   width: 80px;
   height: 80px;
   padding: 11%;
+}
+
+.desktop-home {
+  display: none;
 }
 
 /*=====SERVICES mobile==========*/
@@ -431,7 +439,16 @@ border:1px solid #ccc;
 
 /*=======FOOTER mobile===========*/
 footer {
+  clear: both;
   text-align: center;
+  font-weight: bold;
+  color: #999999;
+  margin-top: 5%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #999999;
 }
 
 /* ==========================================================================
@@ -584,6 +601,7 @@ footer {
                    word-spacing: 3px;
 
                    }
+
 .name h1 {
   font-size: 2em;
   padding-top: 10px;
@@ -619,6 +637,25 @@ footer {
   height: 130px;
   padding: 0;
   margin: 5%;
+}
+
+.home-full-width {
+  display: none;
+}
+
+.desktop-home {
+  display: block;
+}
+
+.desktop-img {
+  width: 32%;
+  height: 20%;
+  float:left;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  position: relative;
+  left: 1.5%;
+  margin-bottom: 5%;
 }
 
 }
