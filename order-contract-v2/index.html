@@ -99,10 +99,23 @@
           <input type="checkbox" name="service[]" value="Package C"> Bridal Makeup / Package C - $150<br><span>Makeup Artist leaves after services are rendered. No touch-ups will be offered.
 </span><br><br>
           <input type="checkbox" name="service[]" value="Bridal Consultation"> Bridal Consultation - $85<br><span>1½ hr. session. Strip lashes are included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Bridesmaids"> Bridesmaids - $85 ea.<br><span>Strip lashes are included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Bridesmaid Consultation"> Bridesmaid Consultation - $65 ea.<br><span>½ hr sessions. Lashes NOT included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Mother of the Bride"> Mother of the Bride or Groom - $75 ea.<br><span>Lashes NOT included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Junior Bridesmaids"> Jr. Bridesmaids (Age 13 and under) - $25 ea.<br><span>Lashes NOT included.</span><br><br>
+          <input type="checkbox" name="service[]" value="Bridesmaids" class="bridesmaids" onchange="valueChanged2()"> Bridesmaids - $85 ea.<br><span>Strip lashes are included.</span><br><br>
+            <div id="bridesmaids-qty">
+              <b>Quantity:</b><br><input type="textarea" name="quantity1" form="form1"/>
+              </div>
+          <input type="checkbox" name="service[]" value="Bridesmaid Consultation" class="bridesmaid-consult" onchange="valueChanged3()"> Bridesmaid Consultation - $65 ea.<br><span>½ hr sessions. Lashes NOT included.</span><br><br>
+          <div id="bridesmaid-consult-qty">
+              <b>Quantity:</b><br><input type="textarea" name="quantity2"  form="form1"/>
+            </div>
+          <input type="checkbox" name="service[]" value="Mother of the Bride" class="mob" onchange="valueChanged4()"> Mother of the Bride or Groom - $75 ea.<br><span>Lashes NOT included.</span><br><br>
+          <div id="mob-qty">
+              <b>Quantity:</b><br><input type="textarea" name="quantity3"  form="form1"/>
+            </div>
+          <input type="checkbox" name="service[]" value="Junior Bridesmaids" class="jr-bridesmaid" onchange="valueChanged5()"> Jr. Bridesmaids (Age 13 and under) - $25 ea.<br><span>Lashes NOT included.</span><br><br>
+          <div id="jr-bm-qty">
+              <b>Quantity:</b><br><input type="textarea" name="quantity4"  form="form1"/>
+            </div>
+
           <input type="checkbox" name="service[]" value="Touch-Up"> Touch-Up/Stand-By on Location - $50 per hr.<br><span>Price is for each additional hour from the time initial service was completed.</span><br><br>
           <input type="checkbox" name="service[]" value="Tattoo-Cover"> Tattoo Cover-Up: Price Varies<br><br>
           <input type="checkbox" name="service[]" value="Lashes"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with latex glue.</span><br><br>
@@ -232,7 +245,41 @@ if the variable "wrong_code" is sent from previous page then display the error f
             $("#allergy-list").hide();
           }
           </script>
-          
+
+          <script type="text/javascript">
+            function valueChanged2()
+            {
+              if($('.bridesmaids').is(":checked"))
+              $("#bridesmaids-qty").show();
+              else
+              $("#bridesmaids-qty").hide();
+            }
+
+            function valueChanged3()
+            {
+              if($('.bridesmaid-consult').is(":checked"))
+              $("#bridesmaid-consult-qty").show();
+              else
+              $("#bridesmaid-consult-qty").hide();
+            }
+
+            function valueChanged4()
+            {
+              if($('.mob').is(":checked"))
+              $("#mob-qty").show();
+              else
+              $("#mob-qty").hide();
+            }
+
+            function valueChanged5()
+            {
+              if($('.jr-bridesmaid').is(":checked"))
+              $("#jr-bm-qty").show();
+              else
+              $("#jr-bm-qty").hide();
+            }
+            </script>
+
           <script language='JavaScript' type='text/javascript'>
           function refreshCaptcha()
           {

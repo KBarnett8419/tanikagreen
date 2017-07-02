@@ -32,9 +32,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
-        <script type="text/javascript" src="scripts/smoothscroll.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arapey|Source+Serif+Pro" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Arsenal|Cinzel+Decorative|Tangerine" rel="stylesheet">
@@ -51,85 +49,75 @@
 
           <div class="tanika-green-bw-logo"></div>
 
-        <div id="customer-info">
+        <form action="/action_page.php" method="post" name="form" id="customer-info">
           <h2>Enter Your Information</h2>
-          <p><b>Name: </b><br><input name="name" type="text" id="name" form="form1" />
-          <p><b>Email: </b><br><input name="from" type="text" id="from"  form="form1" />
-          <p><b>Phone Number: </b><br><input name="phone" type="text" id="phone" form="form1" />
-          <p><b>Address: </b><br><input name="address" type="textarea" style="width: 250px;font-size:14px" id="address" placeholder="Street, City, State, Zip Code" form="form1" />
+          <p><b>Name: </b><br><input name="name" type="text" value="">
+          <p><b>Email: </b><br><input name="email" type="text" value="">
+          <p><b>Phone Number: </b><br><input name="phone" type="text" value="">
           <p><b>Are you allergic to latex and/or any cosmetics?</b></p>
-          <input type="checkbox" name="allergy" value="yes" class="allergy-yes" onchange="valueChanged()"> Yes<br>
-          <input type="checkbox" name="allergy" value="no"> No<br>
+          <input type="checkbox" name="allergy-yes" value="allergy-yes"> Yes<br>
+          <input type="checkbox" name="allergy-no" value="allergy-no"> No<br>
 
-          <div id="allergy-list">
-          <p><b>Please list your allergies.</b><br><input type="textarea" name="allergies" id="allergies" form="form1"/>
-          </div>
-        </div>
+          <p class="allergy-list"><b>Please list your allergies.</b><br><textarea name="message"></textarea>
+        </form>
 
         <h2>Service Categories</h2>
-        <select name="service" id="service-categories" >
-          <option value="select-service" >Select Service</option>
-          <option value="standard-beauty" >Standard Beauty</option>
-          <option value="bridal" >Bridal</option>
-          <option value="photoshoots" >Photoshoots</option>
-          <option value="mortuary" >Mortuary Makeup</option>
+        <select name="service" id="service-categories">
+          <option value="select-service">Select Service</option>
+          <option value="standard-beauty">Standard Beauty</option>
+          <option value="bridal">Bridal</option>
+          <option value="photoshoots">Photoshoots</option>
+          <option value="mortuary">Mortuary Makeup</option>
         </select>
-        <form action="action_page.php" method="post" id="standard-beauty-services" target="myIframe">
+
+        <form action="action_page.php" method="post"id="standard-beauty-services" target="myIframe">
           <h2>Select the service(s) you need</h2>
           <input type="checkbox" name="service[]" value="Silver"> Silver Package - $75<br><span>Full face* with strip lashes</span><br><br>
           <input type="checkbox" name="service[]" value="Gold"> Gold Package - $100<br><span>Full face* with strip lashes, highlight & contour</span><br><br>
           <input type="checkbox" name="service[]" value="Platinum"> Platinum Package - $125<br><span>Full face* with strip lashes (travel included)</span><br><br>
-          <input type="checkbox" name="service[]" value="Platinum Plus"> Platinum Plus Package - $150<br><span>Full face* with top and bottom strip lashes, highlight & contour (travel included)
+          <input type="checkbox" name="service[]" value="Platinum-plus"> Platinum Plus Package - $150<br><span>Full face* with top and bottom strip lashes, highlight & contour (travel included)
 <br>The price does not change if you opt-out of receiving bottom lashes.</span><br><br>
-          <input type="checkbox" name="service[]" value="1-on-1"> 1-on-1 Package - $150<br><span>2-hour session</span><br><br>
-          <input type="checkbox" name="service[]" value="Senior Citizens"> Senior Citizens - $50<br><span>Full face* -Lashes, highlight & contour are NOT included.
+          <input type="checkbox" name="service[]" value="one-on-one"> 1-on-1 Package - $150<br><span>2-hour session</span><br><br>
+          <input type="checkbox" name="service[]" value="senior"> Senior Citizens - $50<br><span>Full face* -Lashes, highlight & contour are NOT included.
 </span><br><br>
-          <input type="checkbox" name="service[]" value="Lashes"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with non-latex glue</span><br>
-<p>* "Full face" consists of eyebrow shaping, eyeshadow application with strip lashes, eyeliner, color correction, foundation, blush and lipstick. Individual lash application is an additional cost.</p>
+          <input type="checkbox" name="service[]" value="lashes"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with non-latex glue</span><br><br>
+<p>* "Full face" consists of eyebrow shaping, eyeshadow application with strip lashes, eyeliner, color correction, foundation, blush and lipstick. Individual lash application is an additional cost.</p><br>
           <input type="submit" name="submit" value="Submit" id="submit">
         </form>
-        <iframe name="myIframe" id="iframe" src="action_page.php">
+        <iframe name="myIframe" id="iframe">
         </iframe>
 
 
-        <form action="action_page.php" id="bridal-services" method="post" target="myIframe2">
+        <form action="action_page.php" id="bridal-services">
           <h2>Select the service(s) you need</h2>
-          <input type="checkbox" name="service[]" value="Package A"> Bridal Makeup / Package A - $350<br><span>Consultation, camera-ready, HD makeup and unlimited touch-ups up to an hour after the bride departs for wedding.</span><br><br>
-          <input type="checkbox" name="service[]" value="Package B"> Bridal Makeup / Package B - $200<br><span>HD makeup and unlimited touch-ups until the bride departs for wedding.</span><br><br>
-          <input type="checkbox" name="service[]" value="Package C"> Bridal Makeup / Package C - $150<br><span>Makeup Artist leaves after services are rendered. No touch-ups will be offered.
+          <input type="checkbox" name="package-a" value="package-a"> Bridal Makeup / Package A - $350<br><span>Consultation, camera-ready, HD makeup and unlimited touch-ups up to an hour after the bride departs for wedding.</span><br><br>
+          <input type="checkbox" name="package-b" value="package-b"> Bridal Makeup / Package B - $200<br><span>HD makeup and unlimited touch-ups until the bride departs for wedding.</span><br><br>
+          <input type="checkbox" name="package-c" value="package-c"> Bridal Makeup / Package C - $150<br><span>Makeup Artist leaves after services are rendered. No touch-ups will be offered.
 </span><br><br>
-          <input type="checkbox" name="service[]" value="Bridal Consultation"> Bridal Consultation - $85<br><span>1½ hr. session. Strip lashes are included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Bridesmaids"> Bridesmaids - $85 ea.<br><span>Strip lashes are included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Bridesmaid Consultation"> Bridesmaid Consultation - $65 ea.<br><span>½ hr sessions. Lashes NOT included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Mother of the Bride"> Mother of the Bride or Groom - $75 ea.<br><span>Lashes NOT included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Junior Bridesmaids"> Jr. Bridesmaids (Age 13 and under) - $25 ea.<br><span>Lashes NOT included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Touch-Up"> Touch-Up/Stand-By on Location - $50 per hr.<br><span>Price is for each additional hour from the time initial service was completed.</span><br><br>
-          <input type="checkbox" name="service[]" value="Tattoo-Cover"> Tattoo Cover-Up: Price Varies<br><br>
-          <input type="checkbox" name="service[]" value="Lashes"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with latex glue.</span><br><br>
-          <input type="submit" value="Submit" id="submit-2" name="submit">
+          <input type="checkbox" name="bridal-consultation" value="bridal-consultation"> Bridal Consultation - $85<br><span>1½ hr. session. Strip lashes are included.</span><br><br>
+          <input type="checkbox" name="bridesmaids" value="bridesmaids"> Bridesmaids - $85 ea.<br><span>Strip lashes are included.</span><br><br>
+          <input type="checkbox" name="bridesmaid-consultation" value="bridesmaid-consultation"> Bridesmaid Consultation - $65 ea.<br><span>½ hr sessions. Lashes NOT included.</span><br><br>
+          <input type="checkbox" name="mother-of-bride" value="mother-of-bride"> Mother of the Bride or Groom - $75 ea.<br><span>Lashes NOT included.</span><br><br>
+          <input type="checkbox" name="jr-bridesmaids" value="jr-bridesmaids"> Jr. Bridesmaids (Age 13 and under) - $25 ea.<br><span>Lashes NOT included.</span><br><br>
+          <input type="checkbox" name="touch-up" value="touch-up"> Touch-Up/Stand-By on Location - $50 per hr.<br><span>Price is for each additional hour from the time initial service was completed.</span><br><br>
+          <input type="checkbox" name="tattoo-cover" value="tattoo-cover"> Tattoo Cover-Up: Price Varies<br><br>
+          <input type="checkbox" name="lashes" value="lashes"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with latex glue.</span><br><br>
+          <input type="submit" value="Submit">
         </form>
-        <iframe name="myIframe2" src="action_page.php" id="iframe-2">
-        </iframe>
 
-
-        <form action="action_page.php" id="photoshoot-services" method="post" target="myIframe3">
+        <form action="action_page.php" id="photoshoot-services">
           <h2>Select the service(s) you need</h2>
-          <input type="checkbox" name="service[]" value="Half-Day"> Half-Day Rate On Location - $300**<br><span>(up to 4 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
-          <input type="checkbox" name="service[]" value="Full-Day"> Full-Day Rate On Location - $550**<br><span>(up to 8 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
-          <input type="checkbox" name="service[]" value="Male-Grooming"> Male Grooming - $50<br><span>Refreshed face</span><br><br>
+          <input type="checkbox" name="half-day" value="half-day"> Half-Day Rate On Location - $300**<br><span>(up to 4 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
+          <input type="checkbox" name="full-day" value="full-day"> Full-Day Rate On Location - $550**<br><span>(up to 8 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
+          <input type="checkbox" name="male-grooming" value="male-grooming"> Male Grooming - $50<br><span>Refreshed face</span><br><br>
           <p>**The rates provided are for commercials, video and/or professional photoshoots. Shoot includes 1 makeup application / touch-up for 1 person only. Negotiations for trade photos are sometimes considered and low budget shoots can be taken into consideration.</p><br>
-          <input type="submit" value="Submit" id="submit-3" name="submit">
+          <input type="submit" value="Submit">
         </form>
-        <iframe name="myIframe3" src="action_page.php" id="iframe-3">
-        </iframe>
 
-        <form action="action_page.php" id="mortuary-makeup" method="post" target="myIframe4">
-          <input type="checkbox" name="service[]" value="Mortuary Makeup"> Mortuary Makeup<br>
-          <br><br>
-          <input type="submit" value="Submit" id="submit-4" name="submit">
+        <form action="action_page.php" id="mortuary-makeup">
+          <h3>Click "Submit" to move to the next section.</h3>
+          <input type="submit" value="Submit">
         </form>
-        <iframe name="myIframe4" src="action_page.php" id="iframe-4">
-        </iframe>
 
 
 </div><!--order-contract-container-->
@@ -160,38 +148,10 @@
 <b>PAYMENT:</b>  The final balance is due on the day of the event – <span>no exceptions</span>. The person(s) responsible for the entire balance of payment is the person(s) that has a signed booking contract. Acceptable forms of payment are: cash, credit or payment through PayPal. For all credit card payments, a 3% service will be added to each transaction.
  </p>
 
-<p><b>Enter your name and date to accept the terms of this contract: </b><br>
-<form action="action_page2.php" method="post" name="form1" id="form1" style="margin:0px; font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11px; width:300px;" onsubmit="MM_validateForm('from','','RisEmail','subject','','R','verif_box','','R','message','','R');return document.MM_returnValue">
+<p><b>Enter your name here to accept the terms of this contract: </b><br><input name="name" type="text" value=""></p>
+<p><b>Date: </b><br><input name="date" type="text" value="">
 
-Name:<br />
-<input name="name2" type="text" id="name2" placeholder="Full Name" />
-<br />
-<br />
-
-Date:<br />
-<input name="date" type="text" id="date" placeholder="Today's Date" />
-<br />
-<br />
-
-<img src="captcha_code_file.php"
-id="captchaimg" >
-<br>
-<label for="message">Enter the code<label>
-<input id="6_letters_code" name="6_letters_code" type="text" style="display:block;">
-
-<!--
-Type verification image:<br />
-<input name="verif_box" type="text" id="verif_box" />
-<img src="verificationimage.php?<?php echo rand(0,9999);?>" alt="verification image, type it in the box" width="50" height="24" align="absbottom" /><br />
-<br />
-
-if the variable "wrong_code" is sent from previous page then display the error field
-<?php if(isset($_GET['wrong_code'])){?>
-<div style="border:1px solid #990000; background-color:#ffffff; padding:4px; padding-left:6px;width:295px;">Please enter the above verification code only</div><br />
-<?php ;}?> -->
-
-<input name="sign-Submit" type="submit"  value="Sign & Submit"/>
-</form>
+<button id="sign">Sign & Submit</button>
 
 <div class="tanika-contact">
     <p><b>TANIKA GREEN</b><br>
@@ -214,32 +174,12 @@ if the variable "wrong_code" is sent from previous page then display the error f
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-101902199-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-        <script type="text/javascript">
-          function valueChanged()
-          {
-            if($('.allergy-yes').is(":checked"))
-            $("#allergy-list").show();
-            else
-            $("#allergy-list").hide();
-          }
-          </script>
-          
-          <script language='JavaScript' type='text/javascript'>
-          function refreshCaptcha()
-          {
-          	var img = document.images['captchaimg'];
-          	img.src = img.src.substring(0,img.src.lastIndexOf("?"))+"?rand="+Math.random()*1000;
-          }
-          </script>
-
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
     </body>
 </html>

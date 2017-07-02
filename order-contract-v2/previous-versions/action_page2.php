@@ -1,8 +1,7 @@
 <?php
 if(isset($_POST['sign-Submit'])){
 $allergies='None';
-$errors = '';
-$subject='TGA: CONTRACT SIGNED';
+$subject='Service Request';
 $ToEmail='booking@tanikagreen.com';
 $emailm='booking@tanikagreen.com';
 $mailheader = "From: ".$emailm."\r\n";
@@ -13,8 +12,7 @@ $date = $_REQUEST["date"];
 $from = $_REQUEST["from"];
 $verif_box = $_REQUEST["verif_box"];
 $phone=$_POST['phone'];
-$address=$_POST['address'];
-$allergies=$_POST["allergies"];
+$allergies=$_POST['allergies'];
 // remove the backslashes that normally appears when entering " or '
 $name = stripslashes($name);
 $name2 = stripslashes($name2);
@@ -22,46 +20,20 @@ $phone = stripslashes($phone);
 $from = stripslashes($from);
 $services=$_COOKIE['service'];
 // check to see if verificaton code was correct
-//if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
-
-///------------Do Validations-------------
-if(empty($name)||empty($from))
-{
-	$errors .= "\n Name and Email are required fields. ";
-}
-if(IsInjected($from))
-{
-	$errors .= "\n Bad email value!";
-}
-if(empty($_SESSION['6_letters_code'] ) ||
-	strcasecmp($_SESSION['6_letters_code'], $_POST['6_letters_code']) != 0)
-{
-//Note: the captcha code is compared case insensitively.
-//if you want case sensitive match, update the check above to
-// strcmp()
-	$errors .= "\n The captcha code does not match!";
-}
-
-if(empty($errors))
-{
-
+if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 	// if verification code was correct send the message and show this page
 	$message = "
+	Hello,
 	<br /><br />
-	Your contract has been signed by ".$name."<br/>
-	<br/>
-	Customer Information:<br/>
-	Name: ".$name." <br/>
+	You have a service Request from ".$name."<br/>
 	Email: ".$from."<br/>
 	Phone: ".$phone."<br/>
-	Address: ".$address."<br/>
-  <br/>
-	Service(s) Requested: ".$services."<br/>
+	Services: ".$services."<br/>
+	Date: ".$date."<br/>
 	Allergies: ".$allergies."<br/>
-	<br/>
-	Name Used for E-Signature: ".$name2."<br/>
-	Date Signed: ".$date."<br/>
-<h4>Electronic Signature by ".$name2." acknowledges and agrees with the following Detailed Contract Policy of Tanika Green Artistry:</h4>
+	<br /><br />
+	Name used for Contract: ".$name2."<br/>
+<h4>Detailed Contract Policy</h4>
 <p>
 <b>BOOKINGS:</b> To secure a date, a signed contract is required with a 30% deposit due at the time of signing. The deposit is non-refundable and non-transferable. Please be advised date and scheduled makeup times will only be reserved when a signed contract and deposit are received.
 <br><br>
@@ -86,44 +58,15 @@ if(empty($errors))
 <b>PAYMENT:</b>  The final balance is due on the day of the event – <span>no exceptions</span>. The person(s) responsible for the entire balance of payment is the person(s) that has a signed booking contract. Acceptable forms of payment are: cash, credit or payment through PayPal. For all credit card payments, a 3% service will be added to each transaction.
  </p>
 	<br/><br/>
-	Please retain a copy for your records. <br/>
-	<br/>
-	<p><b>TANIKA GREEN</b><br>
-	Professional Makeup Artist<br>
-	973-207-3834<br>
-	booking@tanikagreen.com<br>
-	www.tanikagreen.com</p>";
+	Thank you!";
 	mail($ToEmail, $subject, $message, $mailheader);
 	// delete the cookie so it cannot sent again by refreshing this page
 	setcookie('tntcon','');
-	header('Location: thanks.html'); //Replace with your domain or with thank you page
+	header('Location: http://tanikagreen.com/order-contract/thanks'); //Replace with your domain or with thank you page 
 } else {
 	// if verification code was incorrect then return to contact page and show error
 	header("Location:".$_SERVER['HTTP_REFERER']."?subject=$subject&from=$from&message=$message&wrong_code=true");
 	exit;
 }
-}
-
-// Function to validate against any email injection attempts
-function IsInjected($str)
-{
-  $injections = array('(\n+)',
-              '(\r+)',
-              '(\t+)',
-              '(%0A+)',
-              '(%0D+)',
-              '(%08+)',
-              '(%09+)'
-              );
-  $inject = join('|', $injections);
-  $inject = "/$inject/i";
-  if(preg_match($inject,$str))
-    {
-    return true;
-  }
-  else
-    {
-    return false;
-  }
 }
 ?>

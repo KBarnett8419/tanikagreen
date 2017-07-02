@@ -15,6 +15,10 @@ $verif_box = $_REQUEST["verif_box"];
 $phone=$_POST['phone'];
 $address=$_POST['address'];
 $allergies=$_POST["allergies"];
+$bridesmaids=$_POST['quantity1'];
+$bridesmaidConsult=$_POST['quantity2'];
+$motherOfBride=$_POST['quantity3'];
+$juniors=$_POST['quantity4'];
 // remove the backslashes that normally appears when entering " or '
 $name = stripslashes($name);
 $name2 = stripslashes($name2);
@@ -56,7 +60,22 @@ if(empty($errors))
 	Phone: ".$phone."<br/>
 	Address: ".$address."<br/>
   <br/>
-	Service(s) Requested: ".$services."<br/>
+	<b>Service(s) Requested: "if($bridesmaids){
+														 echo ".$bridesmaids. .$services.";
+													 }
+														if($bridesmaidConsult){
+													   echo ".$bridesmaidConsult. .$services.";
+													 }
+														 if($motherOfBride){
+ 													   echo ".$motherOfBride. .$services.";
+													 }
+														 if($juniors){
+ 													   echo ".$juniors. .$services.";
+														}
+														else {
+															echo ".$services.";
+													}"
+	</b><br/>
 	Allergies: ".$allergies."<br/>
 	<br/>
 	Name Used for E-Signature: ".$name2."<br/>
