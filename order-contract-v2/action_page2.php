@@ -1,7 +1,6 @@
 <?php
 if(isset($_POST['sign-Submit'])){
 $allergies='None';
-$errors = '';
 $subject='TGA: CONTRACT SIGNED';
 $ToEmail='booking@tanikagreen.com';
 $emailm='booking@tanikagreen.com';
@@ -11,7 +10,7 @@ $name = $_REQUEST["name"];
 $name2 = $_REQUEST["name2"];
 $date = $_REQUEST["date"];
 $from = $_REQUEST["from"];
-$verif_box = $_REQUEST["verif_box"];
+$verif_box = $_REQUEST["6_letters_code"];
 $phone=$_POST['phone'];
 $address=$_POST['address'];
 $allergies=$_POST["allergies"];
@@ -19,6 +18,7 @@ $bridesmaids=$_POST['quantity1'];
 $bridesmaidConsult=$_POST['quantity2'];
 $motherOfBride=$_POST['quantity3'];
 $juniors=$_POST['quantity4'];
+$postQuantity='';
 // remove the backslashes that normally appears when entering " or '
 $name = stripslashes($name);
 $name2 = stripslashes($name2);
@@ -28,26 +28,7 @@ $services=$_COOKIE['service'];
 // check to see if verificaton code was correct
 //if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 
-///------------Do Validations-------------
-if(empty($name)||empty($from))
-{
-	$errors .= "\n Name and Email are required fields. ";
-}
-if(IsInjected($from))
-{
-	$errors .= "\n Bad email value!";
-}
-if(empty($_SESSION['6_letters_code'] ) ||
-	strcasecmp($_SESSION['6_letters_code'], $_POST['6_letters_code']) != 0)
-{
-//Note: the captcha code is compared case insensitively.
-//if you want case sensitive match, update the check above to
-// strcmp()
-	$errors .= "\n The captcha code does not match!";
-}
-
-if(empty($errors))
-{
+if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 
 	// if verification code was correct send the message and show this page
 	$message = "
@@ -60,22 +41,9 @@ if(empty($errors))
 	Phone: ".$phone."<br/>
 	Address: ".$address."<br/>
   <br/>
-	<b>Service(s) Requested: "if($bridesmaids){
-														 echo ".$bridesmaids. .$services.";
-													 }
-														if($bridesmaidConsult){
-													   echo ".$bridesmaidConsult. .$services.";
-													 }
-														 if($motherOfBride){
- 													   echo ".$motherOfBride. .$services.";
-													 }
-														 if($juniors){
- 													   echo ".$juniors. .$services.";
-														}
-														else {
-															echo ".$services.";
-													}"
-	</b><br/>
+	<b>Service(s) Requested:</b> ".$services."
+
+	<br/>
 	Allergies: ".$allergies."<br/>
 	<br/>
 	Name Used for E-Signature: ".$name2."<br/>
@@ -116,9 +84,10 @@ if(empty($errors))
 	// delete the cookie so it cannot sent again by refreshing this page
 	setcookie('tntcon','');
 	header('Location: thanks.html'); //Replace with your domain or with thank you page
-} else {
+}
+else {
 	// if verification code was incorrect then return to contact page and show error
-	header("Location:".$_SERVER['HTTP_REFERER']."?subject=$subject&from=$from&message=$message&wrong_code=true");
+	header('Location: error-message.html');
 	exit;
 }
 }

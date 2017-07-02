@@ -95,6 +95,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 html body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.order-contract-container {
   width: 90%;
   margin: 5%;
 }
@@ -105,7 +110,51 @@ html body {
   background-repeat: no-repeat;
   width: 15%;
   padding-bottom: 15%;
-  background-image: url('../img/tanika-green-bw-logo.jpg');
+  margin: 0 5%;
+  background-image: url('../img/tanika-green-white-transparent-logo.png');
+}
+
+.logo-background {
+  background-color: #ffcce5;
+  padding: 1% 0;
+}
+
+.logo-background-border {
+  width: 100%;
+  padding-bottom: 2px;
+  border-top: 3px solid #222;
+  border-bottom: 3px solid #222;
+}
+
+#name, #from, #phone, #address {
+  border-bottom: 3px solid #ffcce5;
+}
+
+form h2 {
+  font-size: 1em;
+}
+
+.bridal-service-checks {
+  clear: both;
+}
+
+.qty-area {
+  display: inline-block;
+}
+
+.qty-box {
+  width: 30px;
+  display: inline-block;
+  margin-left: 2px;
+  background-color: #ffcce5;
+}
+
+.sign-submit {
+  background-color: #ffcce5;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 #standard-beauty-services, #bridal-services, #photoshoot-services, #mortuary-makeup {
@@ -136,22 +185,15 @@ button #sign {
   display: none;
 }
 
-#bridesmaids-qty {
+#bridesmaids-qty, #bridesmaid-consult-qty, #mob-qty, #jr-bm-qty {
   display: none;
+  position: relative;
+  bottom: 20px;
 }
 
-#bridesmaid-consult-qty {
-  display: none;
+.error-page {
+  margin: 5%;
 }
-
-#mob-qty {
-  display: none;
-}
-
-#jr-bm-qty {
-  display: none;
-}
-
 
 
 
