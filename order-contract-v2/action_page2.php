@@ -56,7 +56,7 @@ if($_POST['6_letters_code']==$_COOKIE['code']){
 	// if verification code was correct send the message and show this page
 	$message = "
 	<br /><br />
-	Your contract has been signed by ".$name."<br/>
+	The Tanika Green Artistry contract has been signed by ".$name."<br/>
 	<br/>
 	<b>Customer Information:</b><br/>
 	<b>Name:</b> ".$name." <br/>
@@ -104,6 +104,7 @@ if($_POST['6_letters_code']==$_COOKIE['code']){
 	booking@tanikagreen.com<br>
 	www.tanikagreen.com</p>";
 	mail($ToEmail, $subject, $message, $mailheader);
+	mail($from, $subject, $message, $mailheader);
 	// delete the cookie so it cannot sent again by refreshing this page
 	setcookie('tntcon','');
 	header('Location: thanks.html'); //Replace with your domain or with thank you page
