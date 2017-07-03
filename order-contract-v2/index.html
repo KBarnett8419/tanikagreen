@@ -104,19 +104,19 @@
           <input type="checkbox" name="service[]" value="Bridal Consultation"> Bridal Consultation - $85<br><span>1½ hr. session. Strip lashes are included.</span><br><br>
           <input type="checkbox" name="service[]" value="Bridesmaids" class="bridesmaids" onchange="valueChanged2()"> Bridesmaids - $85 ea.<br><span>Strip lashes are included.</span><br><br>
             <div id="bridesmaids-qty">
-              <p class="qty-area"><b>Quantity:</b><br></p><input type="textarea" name="quantity1" class="qty-box" form="form1"/>
+              <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity1" id="quantity1" class="qty-box"/>
               </div>
           <input type="checkbox" name="service[]" value="Bridesmaid Consultation" class="bridesmaid-consult" onchange="valueChanged3()"> Bridesmaid Consultation - $65 ea.<br><span>½ hr sessions. Lashes NOT included.</span><br><br>
           <div id="bridesmaid-consult-qty">
-              <p class="qty-area"><b>Quantity:</b><br></p><input type="textarea" name="quantity2" class="qty-box" form="form1"/>
+              <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity2" id="quantity2" class="qty-box" />
             </div>
           <input type="checkbox" name="service[]" value="Mother of the Bride" class="mob" onchange="valueChanged4()"> Mother of the Bride or Groom - $75 ea.<br><span>Lashes NOT included.</span><br><br>
           <div id="mob-qty">
-              <p class="qty-area"><b>Quantity:</b><br></p><input type="textarea" name="quantity3" class="qty-box" form="form1"/>
+              <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity3" id="quantity3" class="qty-box" />
             </div>
           <input type="checkbox" name="service[]" value="Junior Bridesmaids" class="jr-bridesmaid" onchange="valueChanged5()"> Jr. Bridesmaids (Age 13 and under) - $25 ea.<br><span>Lashes NOT included.</span><br><br>
           <div id="jr-bm-qty">
-              <p class="qty-area"><b>Quantity:</b><br></p><input type="textarea" name="quantity4" class="qty-box"  form="form1"/>
+              <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity4" id="quantity4" class="qty-box" />
             </div>
 
           <input type="checkbox" name="service[]" value="Touch-Up"> Touch-Up/Stand-By on Location - $50 per hr.<br><span>Price is for each additional hour from the time initial service was completed.</span><br><br>
@@ -175,7 +175,7 @@
  </p>
 
 <p><b>Enter your name and date to accept the terms of this contract: </b><br>
-<form action="action_page2.php" method="post" name="form1" id="form1" style="margin:0px; font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11px; width:300px;" onsubmit="MM_validateForm('from','','RisEmail','subject','','R','verif_box','','R','message','','R');return document.MM_returnValue">
+<form action="action_page2.php" method="post" name="form1" id="form1" style="margin:0px; font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11px; width:300px;" >
 
 Name:<br />
 <input name="name2" type="text" id="name2" placeholder="Full Name"style="height: 20px" />
@@ -191,7 +191,7 @@ Date:<br />
 id="captchaimg" >
 <br>
 <label for="message">Enter the code<label>
-<input id="6_letters_code" name="6_letters_code" type="text" style="display:block; height: 20px;">
+<input id="6_letters_code" name="6_letters_code" type="text" style="display:block; height: 20px;" />
 
 <!--
 Type verification image:<br />

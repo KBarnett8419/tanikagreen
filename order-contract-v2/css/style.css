@@ -99,6 +99,7 @@ html body {
   overflow-x: hidden;
 }
 
+/*==== HEADER =========*/
 .order-contract-container {
   width: 90%;
   margin: 5%;
@@ -126,10 +127,12 @@ html body {
   border-bottom: 3px solid #222;
 }
 
+/*===CUSTOMER INFORMATION ======*/
 #name, #from, #phone, #address {
   border-bottom: 3px solid #ffcce5;
 }
 
+/*====SERVICE SECTION=====*/
 form h2 {
   font-size: 1em;
 }
@@ -191,8 +194,13 @@ button #sign {
   bottom: 20px;
 }
 
+/*===RESPONSE PAGES=====*/
 .error-page {
-  margin: 5%;
+  padding: 5%;
+}
+
+.thanks {
+  padding: 5%;
 }
 
 

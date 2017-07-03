@@ -1,9 +1,12 @@
 <?php
+
+include('captcha_code_file.php');
+
 if(isset($_POST['sign-Submit'])){
 $allergies='None';
 $subject='TGA: CONTRACT SIGNED';
-$ToEmail='booking@tanikagreen.com';
-$emailm='booking@tanikagreen.com';
+$ToEmail='jakhmolashrey2@gmail.com';
+$emailm='jakhmolashrey@gmail.com';
 $mailheader = "From: ".$emailm."\r\n";
 $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n";
 $name = $_REQUEST["name"];
@@ -13,22 +16,38 @@ $from = $_REQUEST["from"];
 $verif_box = $_REQUEST["6_letters_code"];
 $phone=$_POST['phone'];
 $address=$_POST['address'];
-$allergies=$_POST["allergies"];
-$bridesmaids=$_POST['quantity1'];
-$bridesmaidConsult=$_POST['quantity2'];
-$motherOfBride=$_POST['quantity3'];
-$juniors=$_POST['quantity4'];
-$postQuantity='';
+if(!empty($_POST["allergies"])){
+$allergies=$_POST["allergies"];	
+}
 // remove the backslashes that normally appears when entering " or '
 $name = stripslashes($name);
 $name2 = stripslashes($name2);
 $phone = stripslashes($phone);
 $from = stripslashes($from);
 $services=$_COOKIE['service'];
+/*Checking the cookie whether the 
+* quantity has been updated
+*/
+
+$qq="";
+if(!empty($_COOKIE['q1'])){
+	$qq.="Quantity for Bridesmaids, Strip lashes: ".$_COOKIE['q1'].",<br/>";
+}
+if(!empty($_COOKIE['q2'])){
+	$qq.="Quantity for Bridesmaid Consultation without Lashes: ".$_COOKIE['q2'].",<br/>";
+}
+if(!empty($_COOKIE['q3'])){
+	$qq.="Quantity for Mother of the Bride or Groom without Lashes: ".$_COOKIE['q3'].",<br/>";
+		}
+if(!empty($_COOKIE['q4'])){
+			$qq.="Quantity for Jr. Bridesmaids (Age 13 and under) without Lashes: ".$_COOKIE['q4'];
+}
+			
+
 // check to see if verificaton code was correct
 //if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 
-if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
+if($_POST['6_letters_code']==$_COOKIE['code']){
 
 	// if verification code was correct send the message and show this page
 	$message = "
@@ -42,9 +61,9 @@ if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
 	Address: ".$address."<br/>
   <br/>
 	<b>Service(s) Requested:</b> ".$services."
-
 	<br/>
 	Allergies: ".$allergies."<br/>
+	".$qq."
 	<br/>
 	Name Used for E-Signature: ".$name2."<br/>
 	Date Signed: ".$date."<br/>
