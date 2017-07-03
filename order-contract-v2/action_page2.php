@@ -1,12 +1,9 @@
 <?php
 
-include('captcha_code_file.php');
-
 if(isset($_POST['sign-Submit'])){
 $allergies='None';
-$subject='TGA: CONTRACT SIGNED';
-$ToEmail='jakhmolashrey2@gmail.com';
-$emailm='jakhmolashrey@gmail.com';
+$ToEmail='booking@tanikagreen.com';
+$emailm='booking@tanikagreen.com';
 $mailheader = "From: ".$emailm."\r\n";
 $mailheader .= "Content-type: text/html; charset=iso-8859-1\r\n";
 $name = $_REQUEST["name"];
@@ -17,7 +14,7 @@ $verif_box = $_REQUEST["6_letters_code"];
 $phone=$_POST['phone'];
 $address=$_POST['address'];
 if(!empty($_POST["allergies"])){
-$allergies=$_POST["allergies"];	
+$allergies=$_POST["allergies"];
 }
 // remove the backslashes that normally appears when entering " or '
 $name = stripslashes($name);
@@ -25,24 +22,31 @@ $name2 = stripslashes($name2);
 $phone = stripslashes($phone);
 $from = stripslashes($from);
 $services=$_COOKIE['service'];
-/*Checking the cookie whether the 
+/*Checking the cookie whether the
 * quantity has been updated
 */
 
 $qq="";
 if(!empty($_COOKIE['q1'])){
-	$qq.="Quantity for Bridesmaids, Strip lashes: ".$_COOKIE['q1'].",<br/>";
+	$qq.="Bridesmaids: ".$_COOKIE['q1'].",<br/>";
 }
 if(!empty($_COOKIE['q2'])){
-	$qq.="Quantity for Bridesmaid Consultation without Lashes: ".$_COOKIE['q2'].",<br/>";
+	$qq.="Bridesmaid Consultations: ".$_COOKIE['q2'].",<br/>";
 }
 if(!empty($_COOKIE['q3'])){
-	$qq.="Quantity for Mother of the Bride or Groom without Lashes: ".$_COOKIE['q3'].",<br/>";
+	$qq.="Mother-of-the-Bride or Groom: ".$_COOKIE['q3'].",<br/>";
 		}
 if(!empty($_COOKIE['q4'])){
-			$qq.="Quantity for Jr. Bridesmaids (Age 13 and under) without Lashes: ".$_COOKIE['q4'];
+			$qq.="Jr. Bridesmaids: ".$_COOKIE['q4'];
 }
-			
+
+$subject="";
+  if(!empty($name2)){
+	$subject.="TGA Contract Signed by ".$name2."";
+}
+	else {
+	$subject.="Contract signature failed attempt - no name entered";
+	}
 
 // check to see if verificaton code was correct
 //if(md5($verif_box).'a4xn' == $_COOKIE['tntcon']){
@@ -54,19 +58,19 @@ if($_POST['6_letters_code']==$_COOKIE['code']){
 	<br /><br />
 	Your contract has been signed by ".$name."<br/>
 	<br/>
-	Customer Information:<br/>
-	Name: ".$name." <br/>
-	Email: ".$from."<br/>
-	Phone: ".$phone."<br/>
-	Address: ".$address."<br/>
+	<b>Customer Information:</b><br/>
+	<b>Name:</b> ".$name." <br/>
+	<b>Email:</b> ".$from."<br/>
+	<b>Phone:</b> ".$phone."<br/>
+	<b>Address:</b> ".$address."<br/>
+	<b>Allergies:</b> ".$allergies."<br/>
   <br/>
 	<b>Service(s) Requested:</b> ".$services."
 	<br/>
-	Allergies: ".$allergies."<br/>
-	".$qq."
-	<br/>
-	Name Used for E-Signature: ".$name2."<br/>
-	Date Signed: ".$date."<br/>
+	<b>Quantities (applicable for Bridal parties only):</b> ".$qq."
+	<br/><br/>
+	<b>Name Used for E-Signature:</b> ".$name2."<br/>
+	<b>Date Signed:</b> ".$date."<br/>
 <h4>Electronic Signature by ".$name2." acknowledges and agrees with the following Detailed Contract Policy of Tanika Green Artistry:</h4>
 <p>
 <b>BOOKINGS:</b> To secure a date, a signed contract is required with a 30% deposit due at the time of signing. The deposit is non-refundable and non-transferable. Please be advised date and scheduled makeup times will only be reserved when a signed contract and deposit are received.
@@ -91,7 +95,7 @@ if($_POST['6_letters_code']==$_COOKIE['code']){
 <br><br>
 <b>PAYMENT:</b>  The final balance is due on the day of the event – <span>no exceptions</span>. The person(s) responsible for the entire balance of payment is the person(s) that has a signed booking contract. Acceptable forms of payment are: cash, credit or payment through PayPal. For all credit card payments, a 3% service will be added to each transaction.
  </p>
-	<br/><br/>
+	<br/>
 	Please retain a copy for your records. <br/>
 	<br/>
 	<p><b>TANIKA GREEN</b><br>

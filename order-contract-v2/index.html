@@ -79,15 +79,15 @@
         </select>
         <form action="action_page.php" method="post" id="standard-beauty-services" target="myIframe">
           <h2>Select the service(s) you need</h2>
-          <input type="checkbox" name="service[]" value="Silver"> Silver Package - $75<br><span>Full face* with strip lashes</span><br><br>
-          <input type="checkbox" name="service[]" value="Gold"> Gold Package - $100<br><span>Full face* with strip lashes, highlight & contour</span><br><br>
-          <input type="checkbox" name="service[]" value="Platinum"> Platinum Package - $125<br><span>Full face* with strip lashes (travel included)</span><br><br>
-          <input type="checkbox" name="service[]" value="Platinum Plus"> Platinum Plus Package - $150<br><span>Full face* with top and bottom strip lashes, highlight & contour (travel included)
+          <input type="checkbox" name="service[]" value="Silver Package - $75"> Silver Package - $75<br><span>Full face* with strip lashes</span><br><br>
+          <input type="checkbox" name="service[]" value="Gold Package - $100"> Gold Package - $100<br><span>Full face* with strip lashes, highlight & contour</span><br><br>
+          <input type="checkbox" name="service[]" value="Platinum Package - $125"> Platinum Package - $125<br><span>Full face* with strip lashes (travel included)</span><br><br>
+          <input type="checkbox" name="service[]" value="Platinum Plus Package - $150"> Platinum Plus Package - $150<br><span>Full face* with top and bottom strip lashes, highlight & contour (travel included)
 <br>The price does not change if you opt-out of receiving bottom lashes.</span><br><br>
-          <input type="checkbox" name="service[]" value="1-on-1"> 1-on-1 Package - $150<br><span>2-hour session</span><br><br>
-          <input type="checkbox" name="service[]" value="Senior Citizens"> Senior Citizens - $50<br><span>Full face* -Lashes, highlight & contour are NOT included.
+          <input type="checkbox" name="service[]" value="1-on-1 Package - $150"> 1-on-1 Package - $150<br><span>2-hour session</span><br><br>
+          <input type="checkbox" name="service[]" value="Senior Citizens - $50"> Senior Citizens - $50<br><span>Full face* -Lashes, highlight & contour are NOT included.
 </span><br><br>
-          <input type="checkbox" name="service[]" value="Lashes"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with non-latex glue</span><br>
+          <input type="checkbox" name="service[]" value="Lashes - $12 strips / $25 individuals"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with non-latex glue</span><br>
 <p>* "Full face" consists of eyebrow shaping, eyeshadow application with strip lashes, eyeliner, color correction, foundation, blush and lipstick. Individual lash application is an additional cost.</p>
           <input type="submit" name="submit" value="Submit" id="submit">
         </form>
@@ -97,31 +97,31 @@
 
         <form action="action_page.php" id="bridal-services" method="post" target="myIframe2">
           <h2>Select the service(s) you need</h2>
-          <input type="checkbox" name="service[]" value="Package A"> Bridal Makeup / Package A - $350<br><span>Consultation, camera-ready, HD makeup and unlimited touch-ups up to an hour after the bride departs for wedding.</span><br><br>
-          <input type="checkbox" name="service[]" value="Package B"> Bridal Makeup / Package B - $200<br><span>HD makeup and unlimited touch-ups until the bride departs for wedding.</span><br><br>
-          <input type="checkbox" name="service[]" value="Package C"> Bridal Makeup / Package C - $150<br><span>Makeup Artist leaves after services are rendered. No touch-ups will be offered.
+          <input type="checkbox" name="service[]" value="Bridal Makeup / Package A - $350"> Bridal Makeup / Package A - $350<br><span>Consultation, camera-ready, HD makeup and unlimited touch-ups up to an hour after the bride departs for wedding.</span><br><br>
+          <input type="checkbox" name="service[]" value="Bridal Makeup / Package B - $200"> Bridal Makeup / Package B - $200<br><span>HD makeup and unlimited touch-ups until the bride departs for wedding.</span><br><br>
+          <input type="checkbox" name="service[]" value="Bridal Makeup / Package C - $150"> Bridal Makeup / Package C - $150<br><span>Makeup Artist leaves after services are rendered. No touch-ups will be offered.
 </span><br><br>
-          <input type="checkbox" name="service[]" value="Bridal Consultation"> Bridal Consultation - $85<br><span>1½ hr. session. Strip lashes are included.</span><br><br>
-          <input type="checkbox" name="service[]" value="Bridesmaids" class="bridesmaids" onchange="valueChanged2()"> Bridesmaids - $85 ea.<br><span>Strip lashes are included.</span><br><br>
+          <input type="checkbox" name="service[]" value="Bridal Consultation - $85"> Bridal Consultation - $85<br><span>1½ hr. session. Strip lashes are included.</span><br><br>
+          <input type="checkbox" name="service[]" value="Bridesmaids - $85 ea." class="bridesmaids" onchange="valueChanged2()"> Bridesmaids - $85 ea.<br><span>Strip lashes are included.</span><br><br>
             <div id="bridesmaids-qty">
               <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity1" id="quantity1" class="qty-box"/>
               </div>
-          <input type="checkbox" name="service[]" value="Bridesmaid Consultation" class="bridesmaid-consult" onchange="valueChanged3()"> Bridesmaid Consultation - $65 ea.<br><span>½ hr sessions. Lashes NOT included.</span><br><br>
+          <input type="checkbox" name="service[]" value="Bridesmaid Consultation - $65 ea" class="bridesmaid-consult" onchange="valueChanged3()"> Bridesmaid Consultation - $65 ea.<br><span>½ hr sessions. Lashes NOT included.</span><br><br>
           <div id="bridesmaid-consult-qty">
               <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity2" id="quantity2" class="qty-box" />
             </div>
-          <input type="checkbox" name="service[]" value="Mother of the Bride" class="mob" onchange="valueChanged4()"> Mother of the Bride or Groom - $75 ea.<br><span>Lashes NOT included.</span><br><br>
+          <input type="checkbox" name="service[]" value="Mother of the Bride or Groom - $75 ea." class="mob" onchange="valueChanged4()"> Mother of the Bride or Groom - $75 ea.<br><span>Lashes NOT included.</span><br><br>
           <div id="mob-qty">
               <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity3" id="quantity3" class="qty-box" />
             </div>
-          <input type="checkbox" name="service[]" value="Junior Bridesmaids" class="jr-bridesmaid" onchange="valueChanged5()"> Jr. Bridesmaids (Age 13 and under) - $25 ea.<br><span>Lashes NOT included.</span><br><br>
+          <input type="checkbox" name="service[]" value="Jr. Bridesmaids (Age 13 and under) - $25 ea." class="jr-bridesmaid" onchange="valueChanged5()"> Jr. Bridesmaids (Age 13 and under) - $25 ea.<br><span>Lashes NOT included.</span><br><br>
           <div id="jr-bm-qty">
               <p class="qty-area"><b>Quantity:</b><br></p><input type="text" name="quantity4" id="quantity4" class="qty-box" />
             </div>
 
-          <input type="checkbox" name="service[]" value="Touch-Up"> Touch-Up/Stand-By on Location - $50 per hr.<br><span>Price is for each additional hour from the time initial service was completed.</span><br><br>
-          <input type="checkbox" name="service[]" value="Tattoo-Cover"> Tattoo Cover-Up: Price Varies<br><br>
-          <input type="checkbox" name="service[]" value="Lashes"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with latex glue.</span><br><br>
+          <input type="checkbox" name="service[]" value="Touch-Up/Stand-By on Location - $50 per hr."> Touch-Up/Stand-By on Location - $50 per hr.<br><span>Price is for each additional hour from the time initial service was completed.</span><br><br>
+          <input type="checkbox" name="service[]" value="Tattoo Cover-Up: Price Varies"> Tattoo Cover-Up: Price Varies<br><br>
+          <input type="checkbox" name="service[]" value="Lashes - $12 strips / $25 individuals"> Lashes - $12/$25<br><span>$12 for strip lashes / $25 for individuals. Applied with latex glue.</span><br><br>
           <input type="submit" value="Submit" id="submit-2" name="submit">
         </form>
         <iframe name="myIframe2" src="action_page.php" id="iframe-2">
@@ -130,9 +130,9 @@
 
         <form action="action_page.php" id="photoshoot-services" method="post" target="myIframe3">
           <h2>Select the service(s) you need</h2>
-          <input type="checkbox" name="service[]" value="Half-Day"> Half-Day Rate On Location - $300**<br><span>(up to 4 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
-          <input type="checkbox" name="service[]" value="Full-Day"> Full-Day Rate On Location - $550**<br><span>(up to 8 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
-          <input type="checkbox" name="service[]" value="Male-Grooming"> Male Grooming - $50<br><span>Refreshed face</span><br><br>
+          <input type="checkbox" name="service[]" value="Half-Day Rate On Location - $300"> Half-Day Rate On Location - $300**<br><span>(up to 4 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
+          <input type="checkbox" name="service[]" value="Full-Day Rate On Location - $550"> Full-Day Rate On Location - $550**<br><span>(up to 8 hours for one model only) - $50 for each additional person - $25 each additional hr.</span><br><br>
+          <input type="checkbox" name="service[]" value="Male Grooming - $50"> Male Grooming - $50<br><span>Refreshed face</span><br><br>
           <p>**The rates provided are for commercials, video and/or professional photoshoots. Shoot includes 1 makeup application / touch-up for 1 person only. Negotiations for trade photos are sometimes considered and low budget shoots can be taken into consideration.</p><br>
           <input type="submit" value="Submit" id="submit-3" name="submit">
         </form>
@@ -177,12 +177,12 @@
 <p><b>Enter your name and date to accept the terms of this contract: </b><br>
 <form action="action_page2.php" method="post" name="form1" id="form1" style="margin:0px; font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11px; width:300px;" >
 
-Name:<br />
+<b>Name:</b><br />
 <input name="name2" type="text" id="name2" placeholder="Full Name"style="height: 20px" />
 <br />
 <br />
 
-Date:<br />
+<b>Date:</b><br />
 <input name="date" type="text" id="date" placeholder="Today's Date" style="height: 20px" />
 <br />
 <br />
@@ -190,7 +190,7 @@ Date:<br />
 <img src="captcha_code_file.php"
 id="captchaimg" >
 <br>
-<label for="message">Enter the code<label>
+<label for="message"><b>Enter the code</b><label>
 <input id="6_letters_code" name="6_letters_code" type="text" style="display:block; height: 20px;" />
 
 <!--

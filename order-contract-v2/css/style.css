@@ -137,6 +137,12 @@ form h2 {
   font-size: 1em;
 }
 
+iframe {
+  border-top: 5px solid #ffcce5;
+  border-bottom: 5px solid #ffcce5;
+  margin-top: 1%;
+}
+
 .bridal-service-checks {
   clear: both;
 }
@@ -192,6 +198,10 @@ button #sign {
   display: none;
   position: relative;
   bottom: 20px;
+}
+/*==FORM BOTTOM====*/
+.tanika-contact {
+  font-size: 1.3em;
 }
 
 /*===RESPONSE PAGES=====*/
