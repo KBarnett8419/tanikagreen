@@ -129,6 +129,10 @@ textarea {
        text-align: center;
      }
 
+     .desktop-header {
+       display: none;
+     }
+
      .div-3 {
        display: block;
        clear: both;
@@ -247,10 +251,18 @@ textarea {
 .services {
   margin-left: 5%;
   text-align: center;
-}
+  position: relative;
+  right: 7px;
+  }
 
 .service-instructions {
   text-align: center;
+}
+
+.service-instructions a {
+  text-decoration: none;
+  color: #ff80aa;
+  font-style: italic;
 }
 
 .services h2 {
@@ -285,6 +297,16 @@ textarea {
 
 #bride-img {
   background-image: url('../img/bridal/img-bride-07.jpg');
+}
+
+#button-1, #button-2, #button-3 {
+  color: #eee;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: #ff1ac6;
+  padding: 10px;
+  margin-bottom: 3%;
 }
 
 /*=======ABOUT mobile==========================*/
@@ -419,6 +441,22 @@ border:1px solid #ccc;
 .paypal {
   text-align: center;
   margin-top: 2%;
+}
+
+#contract-img {
+  width: 20%;
+  height: 20%;
+  margin-top: 2%;
+}
+
+.contract-icon {
+  text-align: center;
+  color: #ff80aa;
+}
+
+.contract-icon p {
+  position: relative;
+  bottom: 20px;
 }
 
 /*=====GALLERY mobile===========*/
@@ -601,21 +639,56 @@ footer a {
                    word-spacing: 3px;
 
                    }
+.div-2 {
+  display: none;
+}
+
+.desktop-header {
+  display: block;
+  clear: both;
+  background-position:center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-color: #f2f2f2;
+  width:100%;
+  margin-right:1%;
+  margin-top: 1%;
+  border:1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+#logo-lid-desktop {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  left: 300px;
+  top: 40px;
+}
+
+
+.name {
+  margin: 0;
+}
 
 .name h1 {
   font-size: 2em;
   padding-top: 10px;
+  position: relative;
+  left: 40px;
+  bottom: 10px;
 
 }
 
 .name h2 {
   font-size: 1.5em;
   padding-top: 10px;
+  position: relative;
+  left: 480px;
+  bottom: 10px;
 }
 
-.name img {
-  padding-top: 30px;
-}
+
 
 .home-img {
   width: 40%;
@@ -645,6 +718,7 @@ footer a {
 
 .desktop-home {
   display: block;
+  margin-top: 2%;
 }
 
 .desktop-img {
@@ -658,76 +732,15 @@ footer a {
   margin-bottom: 5%;
 }
 
-}
-
-
-@media only screen and (min-width: 1024px) {
-  /*
-  #menu {
-         display: none;}
-
-  #nav.js {
-    display: inline;
-    text-align: center;
-  }
-
-    nav {padding: 20px 5px;
-        }
-
-    nav ul li {display: block;}
-
-    nav ul li a {
-                text-transform: uppercase;
-                text-decoration: none;
-                font-size: 1.2em;
-                color: #222;
-                padding-left: 4%;
-                background:#ffcce5;
-                text-align: right;}
-
-    #menu {
-      border: solid 1px #ff99cc;
-      border-radius: 5px;
-      float: right;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      background-color: #222;
-      padding: 5px 10px;
-      font-weight: bolder;
-      color: #fff;
-    } */
-
-nav {
-  word-spacing: 10px;
-}
-
-/*=====GRID 1024px==============*/
 .div-3 {
-  padding-bottom: 100%;
+  margin-top: 2%;
 }
 
-/*=====HOME 1024px==============*/
-.home-img {
-  width: 96%;
-  margin-left: 1%;
+#contract-img {
+  width: 5%;
+  height: 5%;
+  margin-top: 2%;
 }
-
-/*====ABOUT 1024px==============*/
-
-.team-title {
-  margin: 5%;
-}
-
-/*=====CONTACT 1024px===========*/
-.storefront {
-  width: 30%;
-  padding-bottom: 30%;
-}
-
-.on-site {
-  padding-top: 15px;
-}
-
 
 }
 

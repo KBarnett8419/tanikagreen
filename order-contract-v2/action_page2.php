@@ -66,7 +66,7 @@ if($_POST['6_letters_code']==$_COOKIE['code']){
 	<b>Allergies:</b> ".$allergies."<br/>
   <br/>
 	<b>Service(s) Requested:</b> ".$services."
-	<br/>
+	<br/><br/>
 	<b>Quantities (applicable for Bridal parties only):</b> ".$qq."
 	<br/><br/>
 	<b>Name Used for E-Signature:</b> ".$name2."<br/>
@@ -77,13 +77,13 @@ if($_POST['6_letters_code']==$_COOKIE['code']){
 <br><br>
 <b>BOOKING TIMES:</b> Contract will contain a start time and end time initialed and approved by client. Each makeup requires a certain length of time to be finished and is not to exceed time limit. When reserving your date make sure you book accordingly. Any additional, makeup needs performed outside of contract will only be performed at the discretion of the makeup artist. All other persons involved in makeup appointments need to be available at the scheduled time of said appointment in order to not break the contract. All makeup for more than one person must be at same location and consecutive in time (no gaps in between).
 <br><br>
-<b>EARLY CALL TIMES:</b> A $25 fee will be charged for booked appointment times before 7:00 am
+<b>EARLY CALL TIMES:</b> A $25 fee will be charged for booked appointment times before 7:00am.
 <br><br>
 <b>DELAYS:</b> A late fee of $15 will be charged for every ½ hour of delay when a client is late for scheduled time, or if scheduled makeup exceeds allotted time because of client delays. Contract will state the times late fee will begin and the amount charged and will be initialed and approved by client.
 <br><br>
 <b>CANCELLATION:</b> All deposit monies paid by client will be refunded if contract is cancelled due to death. If makeup artist cancels at any time or is unable to perform for any reason, 100% of deposit will be refunded within one (1) week. Client agrees that the refund of 100% of the deposit is the only liability to TGA/Tanika Green and employees, and agents.
 <br><br>
-<b>SERVICE LOCATION & REQUIRMENTS: </b> Location of service for the day-of-event will be at the discretion of the client, but there are certain requirements the makeup artist needs to complete the makeup application: A “setup” table/work area needs to be made available for the artist at said location. Ample lighting is necessary but additional lighting will be provided by artist if necessary for services to be completed.
+<b>SERVICE LOCATION & REQUIRMENTS: </b> Location of service for the day-of-event will be at the discretion of the client, but there are certain requirements the makeup artist needs to complete the makeup application: A setup table/work area needs to be made available for the artist at said location. Ample lighting is necessary but additional lighting will be provided by artist if necessary for services to be completed.
 <br><br>
 <b>PARKING FEES:</b> Where parking, valet or toll fees may be incurred, the amount will be included with the final bill and due for payment on the day of the event.
 <br><br>
@@ -93,7 +93,7 @@ if($_POST['6_letters_code']==$_COOKIE['code']){
 <br><br>
 <b>LIBIALITY:</b> All brushes and makeup products are kept sanitary and are sanitized between every makeup application. Makeup products used are hypoallergenic. Any skin condition should be reported by the client to the makeup artist prior to services being performed and, if need be a sample test of makeup may be performed on the skin to test reaction. TGA/Tanika Green and all employees and agents are exempt from the liability for any skin complication due to allergic reactions as a result of not informing TGA/Tanika Green of allergies.
 <br><br>
-<b>PAYMENT:</b>  The final balance is due on the day of the event – <span>no exceptions</span>. The person(s) responsible for the entire balance of payment is the person(s) that has a signed booking contract. Acceptable forms of payment are: cash, credit or payment through PayPal. For all credit card payments, a 3% service will be added to each transaction.
+<b>PAYMENT:</b>  The final balance is due on the day of the event – no exceptions. The person(s) responsible for the entire balance of payment is the person(s) that has a signed booking contract. Acceptable forms of payment are: cash, credit or payment through PayPal. For all credit card payments, a 3% service will be added to each transaction.
  </p>
 	<br/>
 	Please retain a copy for your records. <br/>
